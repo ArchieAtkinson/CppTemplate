@@ -43,7 +43,7 @@ During this process, if offered, add the binary to PATH. If not offered do it yo
 - Create a build directory with `mkdir build`    
 - Configure CMake with `cmake -S . -B build` or to use Ninja `cmake -S . -B build -G Ninja`  
 - Now to build the project `cmake --build build`    
-- If anything has gone to plan you can now run the binary with `.\build\ProjectName.exe` and `Hello, World` should appear!   
+- If anything has gone to plan you can now run the binary with `.\build\Debug\ProjectName.exe` or `build\ProjectName.exe` (depends on what generator you used) and `Hello, World` should appear!   
 - You know have a basic C++ with CMake environment setup    
 
 
