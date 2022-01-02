@@ -1,3 +1,0 @@
-C:/Users/Archie/Documents/Projects/Repos/CppTemplate/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Archie/Documents/Projects/Repos/CppTemplate/build/CMakeFiles/ProjectName.dir
-C:/Users/Archie/Documents/Projects/Repos/CppTemplate/build/CMakeFiles/edit_cache.dir
