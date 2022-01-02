@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/Archie/Documents/Projects/Repos/CppTemplate/build",
+  "command": "C:\\msys64\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe -IC:/Users/Archie/Documents/Projects/Repos/CppTemplate/inc -IC:/Users/Archie/Documents/Projects/Repos/CppTemplate/src -O3 -DNDEBUG -o CMakeFiles\\ProjectName.dir\\src\\main.cpp.obj -c C:\\Users\\Archie\\Documents\\Projects\\Repos\\CppTemplate\\src\\main.cpp",
+  "file": "C:\\Users\\Archie\\Documents\\Projects\\Repos\\CppTemplate\\src\\main.cpp"
+}
+]
