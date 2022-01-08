@@ -131,6 +131,17 @@ Now you have the demo code compiling, you may want to start developing your own 
 
 ---
 
+## Adding New Files
+If you want to organize your code into multiply files, you need to let CMake know. Every file you use needs to be added to your CMakeList.txt. 
+- Open `CMakeList.txt`.
+- Go to the `Sources` section.
+- You can see two functions, one for `SOURCES` and one for `HEADERS`.
+- Source files (.c or .cpp) go under `SOURCES` and header files (.h or .hpp) go under `HEADERS`.
+- Just create a newline under the respective function and add the path to your file.
+- Rebuild and Run!
+
+---
+
 ## Troubleshooting
 
 ### `No useable generator found` error:
