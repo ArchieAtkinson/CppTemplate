@@ -1,5 +1,5 @@
 # Basic
-This repo is a simple project template to C/C++ project up and running using CMake and VSCode.
+This repo is a simple project template for C/C++ to get your project up and running using CMake and VSCode.
 
 This project uses CMake and therefore the file type (.c or .cpp) dictates which compiler is used. If you want this to be a C project, ensure source files have the .c extension. For C++ the .cpp extension.
 

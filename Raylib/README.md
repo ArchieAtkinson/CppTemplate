@@ -1,5 +1,5 @@
 # Raylib
-This repo is a simple template to help you get a [raylib](https://www.raylib.com/index.html) C/C++ project up and running using CMake and VSCode.
+This repo is a simple template to help you get your [raylib](https://www.raylib.com/index.html) C/C++ project up and running using CMake and VSCode.
 
 This system uses CMake and therefore the file type (.c or .cpp) dictates which compiler is used. If you want this to be a C project, ensure source files have the .c extension. For C++ the .cpp extension.
 
