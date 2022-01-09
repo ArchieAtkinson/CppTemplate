@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 # Config
-project(ProjectName VERSION 1.0.0 LANGUAGES C CXX ASM)
+project(Basic VERSION 1.0.0 LANGUAGES C CXX ASM)
 
 # Source
 set(SOURCES 

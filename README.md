@@ -1,16 +1,17 @@
 # CppTemplate
-This repo is a simple template to help you start a C/C++ project using CMake. The setup instructions are currently only for Windows but can be adapted for other platforms. The usage instructions should work on any platforms with a bit of modification and googling but feel free to create an issue and I'll do my best to help.
 
-This system uses CMake and therefore the file type (.c or .cpp) dictates which compiler is used. If you want this to be a C project, ensure source files have the .c extension. For cpp the .cpp extension.
+This repo is a collection of templates for different types of C++ projects for my own and others reference. All the templates are independent but generalized instructions on how to get started are below. The setup instructions are currently only for Windows but can be adapted for other platforms, please reach out if you need help. 
 
----
+Extra information about the individual projects are in the README of each folder.
+
+- [Basic](basic) - A bare-bones C/C++ (C++ by default) project template. 
+- [Raylib](Raylib) - A simple and easy to use raylib C/C++ (C by default) project template.
+
 
 ## Setup (Windows)
 ### Compiler
-We are going to using GCC (G++) as our compiler. I've found that the best way to get GCC on Windows is using MSYS2. If you have GCC installed or another compiler like MVSC or Clang, you can skip this step. 
-
-This is a rewrite of [this guide on 
-stackoverflow](https://stackoverflow.com/questions/30069830/how-to-install-mingw-w64-and-msys2).
+We are going to using GCC (G++) as our compiler. I've found that the best way to get GCC on Windows is using MSYS2. If you have GCC installed or another compiler like MVSC or Clang, you can skip this step. (This guide is heavily based on of [this guide on 
+stackoverflow](https://stackoverflow.com/questions/30069830/how-to-install-mingw-w64-and-msys2)).
 
 - Download [MSYS2](https://www.msys2.org/) and install.     
 - Run MSYS2.     
@@ -24,12 +25,12 @@ stackoverflow](https://stackoverflow.com/questions/30069830/how-to-install-mingw
   -  `pacman -S mingw-w64-i686-toolchain`.       
 - Now start MSYS2 MinGW x64/x86 and check the install worked by running:
   -  `gcc --version`
-- If this does provide output with a gcc version try repeating the above steps or create an issue in this repo. 
+- If this doesn't provide output with a gcc version try repeating the above steps or create an issue in this repo. 
 
 You now have your compiler install, to allow you access it anywhere without needing to provide its location add `<MSYS2 root>/mingw64/bin` or `<MSYS2 root>/mingw32/bin` (for 32 bit machines) to your PATH. This guide will assume that you have done this. 
 
 ### Build Tools and Version Control
-Now we have our compiler working, we need the tools to build our programs. This can be done directly via the compiler with command line arguments however that gets boring fast. I do suggest you [look into how you compile programs](https://www.youtube.com/watch?v=VDslRumKvRA) just using the compiler as it will help your understanding but it's generally not recommended for everyday use. 
+Now we have our compiler working, we need the tools to build our programs. Compiling a program can be done by hand directly via the compiler's command line arguments however that gets boring fast. I do suggest you [look into how you compile programs without build tools](https://youtu.be/2YfM-HxQd_8?t=19) as it will help your understanding but it's generally not recommended for everyday use. 
 
 There are a couple of other programs required:
 - [CMake](https://cmake.org/download/) - CMake it self.
@@ -39,33 +40,33 @@ During this process, CMake will ask if you want it added to PATH, click yes as i
 
 Note: You need to download these for your Host OS, do not install them through MSYS2 as it will not work correctly.
 
----
 
 ## Downloading the Code
-First we need to get the project onto our local machine. This can be done two ways, either by downloading the repo from the Github website or git.
+First we need to get the project template onto our local machine. This can be done two ways, either by downloading the repo from the Github website or git.
 
 ### In Browser
-- Go to the [repo page](https://github.com/ArchieAtkinson/CppTemplate)
-- Click the `Code` button
-- Download zip
-- Once downloaded extract the zip to where you would like project to live.
+- Go to the [repo page](https://github.com/ArchieAtkinson/CppTemplate).
+- Click the `Code` button.
+- Download zip.
+- Once downloaded extract the zip.
+- Move the folder of the project template you want to use somewhere suitable.
 - You are ready to go.
 
 ### Git
 - Open Git Bash or your terminal.
 - Navigate to where you would like the repo stored.
-- Then clone it with the following command:  
+- Then clone the whole repo it with the following command:  
   - `git clone https://github.com/ArchieAtkinson/CppTemplate.git` 
+- Feels free to delete the project template folders you don't need. 
 - You are ready to go.
    
----
 
 ## Building and Running the Code 
-To build and run your code you have two options. Either using the CMake command line interface or using your IDE which in this case will VSCode. I suggest running through command line setup so you understand whats going under the hood as you IDE will be running the same (or very similar) commands, just in the background. 
+To build and run your code you have two options. Either using the CMake command line interface or using an IDE, which in this case will be VSCode. I suggest reading through command line setup so you understand whats going under the hood as your IDE will be running the same (or very similar) commands, just in the background. 
 
 ### Command Line
 
-- The first step is to open a terminal and navigate inside the repo directory, any terminals will work but Powershell on Windows is good go to.
+- The first step is to open a terminal and navigate inside the project folder you would like to use. 
 - Create a build directory with:
     - `mkdir build`    
 - Configure your CMake:
@@ -76,7 +77,6 @@ To build and run your code you have two options. Either using the CMake command 
   - `cmake --build build`    
 - If everything has gone to plan you can now run the binary with:
   -  `.\build\ProjectName.exe`
-- And `Hello, World` and `RELEASE BUILD` (or `DEBUG BUILD`) should appear!    
  
 You now have a basic C/C++ with CMake environment setup.
 
@@ -89,8 +89,8 @@ Note: Visual Studio Code (VSCode) is not the same as [Visual Studio](https://vis
 - Once downloaded, go the extensions tab of the left and install the following extensions:
     - [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
     - [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-- Now open the directory of the project you downloaded earlier.
-- If asked "Would you like to configure project 'CppTemplate'? Click `Yes` 
+- Now open the directory of the the project folder you would like to use.
+- If asked "Would you like to configure project '<ProjectName>'? Click `Yes` 
 - You should now be able to see bar at bottom, shown below.   
     - The `Build Type` button lets you set your build for release or debug (or any other builds you want to support).
     - The `Kit` button lets you set your compiler, if you are following this guide on Windows you want to select the GCC...mingw32 option.
@@ -98,13 +98,12 @@ Note: Visual Studio Code (VSCode) is not the same as [Visual Studio](https://vis
     - The `Debug` button starts a debugging session (It builds first, then launches the debugger).
     - The `Run` button starts the programing normally (It builds first, then launches).
     - These can all be bound to a key, see File->Preference->Keyboard Shortcuts.
+    - You should now be able to click the "Run" button to compile and launch your program. 
+  
 ![Annotated image of the cmake bar at the bottom left of VSCode](repo_assets/CMake_Bar.png)
-- You should now be able to click the "Run" button to compile and launch your program. 
-- And `Hello, World` and `RELEASE BUILD` (or `DEBUG BUILD`) should appear!  
+
 
 You now have a basic C/C++ with CMake environment setup.
-
----
 
 ## Renaming the Project
 Now you have the demo code compiling, you may want to start developing your own project. Well the first step is setting a name. To do so you only need to change one bit of text:   
@@ -113,8 +112,8 @@ Now you have the demo code compiling, you may want to start developing your own 
 - Near the top there is a line that reads:
   - `project(ProjectName VERSION 1.0.0 LANGUAGES C CXX ASM)`
 - Just change where is says `ProjectName` to what ever you want you project to be called!
-  - I would suggest not including spaces or any of the following characters `*"\/<>:|?` to prevent issues.
-- As this changes the build files CMake changes, we need to clean the build files.
+  - I would suggest not including spaces or any of the following characters `*"\/<>:|?` to prevent possible issues.
+- As this changes the build files CMake generates, we need to clean the build files.
 - Command Line Method:
   - First clean the build folder:
     - `cmake --build build --target clean`
@@ -129,7 +128,6 @@ Now you have the demo code compiling, you may want to start developing your own 
     - `Cmake: Clean Rebuild` and pressing enter
   - You can now run it by clicking the `Run` button
 
----
 
 ## Adding New Files
 If you want to organize your code into multiply files, you need to let CMake know. Every file you use needs to be added to your CMakeList.txt. 
@@ -139,8 +137,6 @@ If you want to organize your code into multiply files, you need to let CMake kno
 - Source files (.c or .cpp) go under `SOURCES` and header files (.h or .hpp) go under `HEADERS`.
 - Just create a newline under the respective function and add the path to your file.
 - Rebuild and Run!
-
----
 
 ## Troubleshooting
 
@@ -164,14 +160,14 @@ Note: On other platforms the same steps work but the generator name will be diff
 - Ensure your build is set to Debug while debugging or the debugger will not work.
 
 ### I was not asked "Would you like to configure project 'CppTemplate'?" when loading the project in VSCode.
-- If this happens, don't worry. 
 - Use the keyboard shortcut to bring up the Command Pallette:
   - `Ctrl + Shift + P`
 - Now we will force CMake to configure by typing:
   - `Cmake: Configure` and press enter
 - You can now continue the guide.
 
----
+
 
 ## End Note
-I plan to expand this project over time to cover more us cases and platforms. Feel free to create issues if you are having problem and I'll do my best to help, please be as descriptive as possible. Pull request are also welcome to improve the current template or add more.
+This repo is designed to help people new to C/C++ get started. I'm still fairly new to CMake, C++ and Open Source project. I would love any feedback, so please raise an Issue on the Github page if you have any! If you have any issues with the steps in this repo, just create an issue on Github and I'll do my best to help!
+
