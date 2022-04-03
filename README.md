@@ -4,7 +4,7 @@ This repo is a collection of templates for different types of C++ projects for m
 
 Extra information about the individual projects are in the README of each folder.
 
-- [Basic](basic) - A bare-bones C/C++ (C++ by default) project template. 
+- [Basic](Basic) - A bare-bones C/C++ (C++ by default) project template. 
 - [Raylib](Raylib) - A simple and easy to use raylib C/C++ (C by default) project template.
 - [Catch2](Catch2) - A bare-bones C/C++ (C++ by default) project template with the Catch2 unit test framework.  
 
