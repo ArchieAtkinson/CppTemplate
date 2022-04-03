@@ -6,6 +6,7 @@ Extra information about the individual projects are in the README of each folder
 
 - [Basic](basic) - A bare-bones C/C++ (C++ by default) project template. 
 - [Raylib](Raylib) - A simple and easy to use raylib C/C++ (C by default) project template.
+- [Catch2](Catch2) - A bare-bones C/C++ (C++ by default) project template with the Catch2 unit test framework.  
 
 
 ## Setup (Windows)

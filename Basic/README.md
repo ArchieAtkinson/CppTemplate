@@ -1,7 +1,7 @@
 # Basic
 This repo is a simple project template for C/C++ to get your project up and running using CMake and VSCode.
 
-This project uses CMake and therefore the file type (.c or .cpp) dictates which compiler is used. By default this project is set to C due to raylib being a C library but can be changed to C++ by changing `main.cpp` to `main.c`. Make sure you update your [CMakeList.txt with the new file name](../README.md#adding-new-files).
+This project uses CMake and therefore the file type (.c or .cpp) dictates which compiler is used. By default this project is set to C++ but can be changed to C by changing `main.c` to `main.cpp`. Make sure you update your [CMakeLists.txt with the new file name](../README.md#adding-new-files).
 
 ## Compiler, Build and VSCode
 
