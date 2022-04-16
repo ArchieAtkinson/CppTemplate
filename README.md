@@ -17,9 +17,9 @@ stackoverflow](https://stackoverflow.com/questions/30069830/how-to-install-mingw
 - Download [MSYS2](https://www.msys2.org/) and install.     
 - Run MSYS2.     
 - Update package database and base package by running:
-  - `packman -Syu`.     
+  - `pacman -Syu`.     
 - Relaunch MSYS2 and run to finish the process:
-  - `packman -Su`    
+  - `pacman -Su`    
 - Install GCC by running (You may need to press enter when prompted what to install):
   - `pacman -S mingw-w64-x86_64-toolchain`
 - or on 32 bit machines run:
